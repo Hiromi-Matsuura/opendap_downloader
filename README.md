@@ -1,4 +1,4 @@
-# Sattelite_Dataset
+# opendap_downloader
 
 You can download satellite data through OPeNDAP using the ncks command.  
 This python package (opendap) wraps the ncks command so please download the ncks command first before using this package.  
@@ -78,6 +78,12 @@ excecuter.excecute_downloads()
 4. Search URL like the below an image
 
 ![URL](./image/opendap_url_hawaii.png)
+
+## Uninstall
+
+```bash
+pip uninstall opendap
+```
 
 ### Refernces
 
