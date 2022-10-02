@@ -36,14 +36,11 @@ class Area:
         
 if __name__ == '__main__':
 
-    from position import Position
-    RESOLUTION = 0.125
+    west = Longitude(40.125)
+    east = Longitude(80.125)
 
-    west = Longitude(Position(40.125, RESOLUTION))
-    east = Longitude(Position(80.125, RESOLUTION))
-
-    south = Latitude(Position(-70.125, RESOLUTION))
-    north = Latitude(Position(20.250, RESOLUTION))
+    south = Latitude(-70.125)
+    north = Latitude(20.875)
 
     area = Area(west, east, south, north)
 

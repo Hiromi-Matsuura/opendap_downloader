@@ -88,16 +88,20 @@ class OISST_nearest_downloader(Downloader):
 
 if __name__ == '__main__':
 
-    from opendap import *
+    from longitude import Longitude
+    from latitude import Latitude
+    from area import Area
+    from span import Span
+    from url import URL
     import datetime
 
     url   = URL('http://apdrc.soest.hawaii.edu:80/dods/public_data/NOAA_SST/OISST_AVHRR/daily_v2.1_1981-2015')
 
     RESOLUTION = 0.125
-    west  = Longitude(Position(118.125, RESOLUTION))
-    east  = Longitude(Position(240.125, RESOLUTION))
-    south = Latitude(Position(20.125, RESOLUTION))
-    north = Latitude(Position(50.250, RESOLUTION))
+    west  = Longitude(118.125)
+    east  = Longitude(240.125)
+    south = Latitude(20.125)
+    north = Latitude(50.250)
     area  = Area(west, east, south, north)
 
     start  = datetime.datetime(1993, 1, 1)

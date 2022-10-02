@@ -1,21 +1,18 @@
-from tkinter import W
-from opendap.position import Position
-
 class Latitude:
 
-    MIN : float = -89.875
-    MAX : float = 89.875
+    MIN : float = -90.000
+    MAX : float = 90.000
 
-    def __init__(self, position :Position) -> None:
+    def __init__(self, position :float) -> None:
 
-        if position.position < Latitude.MIN or Latitude.MAX < position.position:
+        if position < Latitude.MIN or Latitude.MAX < position:
 
             raise Exception(f'You set unavailable range. You should put value from {Latitude.MIN} to {Latitude.MAX}')
             
-        self._latitude : Position = position
+        self._latitude : float = float(position)
     
     @property
-    def latitude(self) -> Position:
+    def latitude(self) -> float:
 
         return self._latitude
     
@@ -25,25 +22,21 @@ class Latitude:
     
     def is_greater_than(self, latitude):
 
-        return latitude.latitude.position < self.latitude.position
+        return latitude._latitude < self._latitude
 
     def is_less_than(self, latitude):
 
-        return self.latitude.position < latitude.latitude.position
+        return self._latitude < latitude._latitude
 
 if __name__ == '__main__':
 
-    from position import Position
     RESOLUTION = 0.125
-    p1 = Position(50, RESOLUTION)
-    p2 = Position(80, RESOLUTION)
-    p3 = Position(2000, RESOLUTION)
 
-    south = Latitude(p1)
-    north = Latitude(p2)
-    print(south, north) # Read Latitude class __str__
-    print(south.latitude, north.latitude) # Read Position class __str__
+    south = Latitude(50.0)
+    north = Latitude(80.0)
+    print(south, north) 
 
-    error_lat = Latitude(p3)
+    err_point = 300.0
+    error_lat = Latitude(err_point)
 
 
