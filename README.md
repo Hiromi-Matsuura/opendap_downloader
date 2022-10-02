@@ -45,11 +45,10 @@ import datetime
 - Selecting the url  (You can get url through Asi-Pacific Data Center [hawaii](http://apdrc.soest.hawaii.edu/index.php))
 
 ```python
-RESOLUTION = 0.25 
-west  = Longitude(Position(118.125, RESOLUTION))
-east  = Longitude(Position(240.125, RESOLUTION))
-south = Latitude(Position(20.125, RESOLUTION))
-north = Latitude(Position(50.250, RESOLUTION))
+west  = Longitude(118.125)
+east  = Longitude(240.125)
+south = Latitude(20.125)
+north = Latitude(50.250)
 area  = Area(west, east, south, north)
 
 start = datetime.datetime(1993, 1, 1)
