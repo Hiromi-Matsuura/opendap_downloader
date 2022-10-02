@@ -23,7 +23,7 @@ If you can sucessuflly download ncks command, you can see path of ncks from your
 Please type the below command in your shell
 
 ```bash
-pip install "git+https://github.com/Hiromi-Matsuura/Sattelite_Dataset.git"
+pip install "git+https://github.com/Hiromi-Matsuura/opendap_downloader.git"
 ```
 
 If you can sucessuflly download packages, you can import opendap in your python file.
