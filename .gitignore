@@ -1,0 +1,6 @@
+*.nc
+*.egg-info
+*.pyc
+./opedap/__pycache__
+dist/
+build/
